@@ -1,0 +1,36 @@
+{
+  "name": "terminal_t_half",
+  "architecture_id": "terminal-t-half-v1",
+  "project_root": "{package_root}/..",
+  "pretrain_model_dir": "{project_root}/src/pretrain_model",
+  "model_root": "{project_root}/models/terminal_t_half",
+  "checkpoint_name": "best_model.pt",
+  "model_layout": "repeat_fold",
+  "expected_repeats": [1,2,3],
+  "expected_folds": [1,2,3,4,5],
+  "task_names": ["human","rat","mouse"],
+  "default_tasks": ["human","rat"],
+  "output_names": ["ge1h","ge3h","ge6h","ge12h"],
+  "output_values": [1.0,3.0,6.0,12.0],
+  "output_type": "ordinal_probability",
+  "prediction_threshold": 0.5,
+  "monotonic_outputs": true,
+  "thresholds_h": {
+    "human": [3.0,6.0,12.0],
+    "rat": [1.0,3.0,6.0],
+    "mouse": [3.0,6.0]
+  },
+  "selection_tag": "v1_5conf",
+  "columns": {
+    "id": "InChIKey",
+    "smiles": "canonical_smiles",
+    "task": "species_norm",
+    "value": "value_norm",
+    "source": "source"
+  },
+  "cache": {
+    "feature_csv": "peptide_features_model_aligned.csv",
+    "graph_dir": "graph",
+    "segment_bundle": "admet_segment_bundle_simplified.pkl"
+  }
+}

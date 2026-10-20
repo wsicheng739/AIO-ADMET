@@ -1,0 +1,45 @@
+{
+  "name": "caco2",
+  "architecture_id": "caco2-v1",
+  "project_root": "{package_root}/..",
+  "pretrain_model_dir": "{project_root}/src/pretrain_model",
+  "model_root": "{project_root}/models/caco2",
+  "model_layout": "fold_only",
+  "checkpoint_name": "best_model.pt",
+  "expected_folds": [1,2,3,4,5],
+  "task_names": [
+    "papp_AtoB",
+    "papp_BtoA",
+    "ratio_BtoA"
+  ],
+  "default_tasks": [
+    "papp_AtoB",
+    "papp_BtoA",
+    "ratio_BtoA"
+  ],
+  "output_names": [
+    "log_value"
+  ],
+  "output_values": [
+    null
+  ],
+  "selection_tag": "v1_5conf",
+  "columns": {
+    "id": "InChIKey",
+    "smiles": "canonical_smiles",
+    "task": "task",
+    "value": "log_value",
+    "source": "source"
+  },
+  "cache": {
+    "feature_csv": "peptide_features_model_aligned.csv",
+    "graph_dir": "graph",
+    "segment_bundle": "admet_segment_bundle_simplified.pkl"
+  },
+  "target_transform": {
+    "type": "task_standardized_log10",
+    "mean_key": "y_mu_by_task",
+    "std_key": "y_sd_by_task",
+    "original_scale_name": "value_norm"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "unbound_fraction",
+  "architecture_id": "unbound-fraction-v1",
+  "project_root": "{package_root}/..",
+  "pretrain_model_dir": "{project_root}/src/pretrain_model",
+  "model_root": "{project_root}/models/unbound_fraction",
+  "checkpoint_name": "best_model.pt",
+  "model_layout": "fold_only",
+  "expected_folds": [1,2,3,4,5],
+  "task_names": ["human","rat","mouse"],
+  "default_tasks": ["human","mouse"],
+  "output_names": ["fu_ge1","fu_ge10","fu_ge20","fu_ge50"],
+  "output_values": [1.0,10.0,20.0,50.0],
+  "output_type": "ordinal_probability",
+  "prediction_threshold": 0.5,
+  "monotonic_outputs": true,
+  "selection_tag": "v1_5conf",
+  "columns": {
+    "id": "InChIKey",
+    "smiles": "canonical_smiles",
+    "task": "task",
+    "value": "fu_percent",
+    "source": "source"
+  },
+  "cache": {
+    "feature_csv": "peptide_features_model_aligned.csv",
+    "graph_dir": "graph",
+    "segment_bundle": "admet_segment_bundle_simplified.pkl"
+  }
+}

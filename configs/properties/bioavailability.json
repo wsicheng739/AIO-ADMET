@@ -1,0 +1,27 @@
+{
+  "name": "bioavailability",
+  "architecture_id": "bioavailability-v1",
+  "project_root": "{package_root}/..",
+  "pretrain_model_dir": "{project_root}/src/pretrain_model",
+  "model_root": "{project_root}/models/bioavailability",
+  "checkpoint_name": "best_model.pt",
+  "expected_repeats": [1,2,3],
+  "expected_folds": [1,2,3,4,5],
+  "task_names": ["human","mouse","rat","dog"],
+  "default_task": "human",
+  "output_names": ["ge5","ge20","ge50"],
+  "output_values": [5.0,20.0,50.0],
+  "selection_tag": "v1_5conf",
+  "columns": {
+    "id": "InChIKey",
+    "smiles": "canonical_smiles",
+    "task": "species_norm",
+    "value": "value_parsed",
+    "source": "source"
+  },
+  "cache": {
+    "feature_csv": "peptide_features_model_aligned.csv",
+    "graph_dir": "graph",
+    "segment_bundle": "admet_segment_bundle_simplified.pkl"
+  }
+}

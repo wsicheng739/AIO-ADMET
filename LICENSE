@@ -1,0 +1,21 @@
+AIO Part I: Interpretable ADMET Prediction for Cyclic Peptides and Macrocycles
+
+Copyright (c) 2026 the AIO authors.
+
+Except for third-party material identified below or in accompanying source
+documentation, this work is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+You may share and adapt the material for non-commercial purposes, provided
+that you give appropriate credit, provide a link to the license, and indicate
+whether changes were made. You may not use the material for commercial
+purposes. No additional legal or technological restrictions may be applied
+that prevent others from doing anything the license permits.
+
+The full license terms are available at:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Third-party datasets, software, model outputs, and other incorporated material
+remain subject to their respective licenses and terms. This license does not
+grant rights that the AIO authors do not own. Model inference additionally
+requires valid author-issued credentials, as described in README.md.
