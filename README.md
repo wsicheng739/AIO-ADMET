@@ -28,7 +28,7 @@
 
 AIO is an interpretable deep learning framework for multi-endpoint ADMET prediction of cyclic peptides and macrocycles. It integrates molecular structure, solvent-dependent conformations, and physicochemical features to predict ADMET properties and guide molecular optimization.
 
-This repository provides datasets, preprocessing scripts, reproducibility resources, encrypted model packages, and licensed inference scripts associated with **AIO Part I**.
+This repository provides pretraining datasets, preprocessing scripts for permeability, reproducibility resources, and licensed inference scripts associated with **AIO Part I**.
 
 ## Overview
 
